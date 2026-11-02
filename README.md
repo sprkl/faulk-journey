@@ -7,3 +7,7 @@ Chaque dossier `tracks/<date>-<slug>/` contient :
 - `track.mp3` : l'export de Faulk, encodé en MP3 ;
 - `track.mid` : le rendu MIDI de la fiche ;
 - `sheet.md` : la fiche de production (brief, contraintes, motifs, arrangement).
+
+## Licence
+
+Les morceaux, les fichiers MIDI et les fiches sont publiés sous [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0) : vous pouvez les écouter, les partager, les remixer et les réutiliser, y compris commercialement, en créditant « Faulk Journey (sprkl) » avec un lien vers ce dépôt. Texte complet : [`LICENSE`](LICENSE).
