@@ -6,7 +6,8 @@ Chaque dossier `tracks/<date>-<slug>/` contient :
 
 - `track.mp3` : l'export de Faulk, encodé en MP3 ;
 - `track.mid` : le rendu MIDI de la fiche ;
-- `sheet.md` : la fiche de production (brief, contraintes, motifs, arrangement).
+- `sheet.md` : la fiche de production (brief, contraintes, motifs, arrangement) ;
+- `project.faulkpack` : le projet Faulk tel que l'agent l'a construit, qui s'ouvre dans Faulk par `https://faulk.app/app?open=<lien du fichier>`.
 
 ## Licence
 
