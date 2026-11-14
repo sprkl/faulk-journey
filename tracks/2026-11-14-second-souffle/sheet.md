@@ -1,6 +1,9 @@
-# Second souffle
+# Second souffle (v2)
 
 Instrumental électronique mélodique, 120 bpm, **Ré mineur** puis **Mi mineur**, 88 mesures (2 min 56). Le morceau se termine une première fois, pour de bon : un petit arc monte vite, se défait jusqu'à une seule note, puis quatre mesures de presque rien. Il repart en demi-temps sur un Ré tenu à la basse, les accords bougent au-dessus sans que la basse cède, un accord suspendu attend quatre mesures, et le vrai sommet arrive un ton plus haut, la basse bougeant enfin sur son premier temps. Le thème du début y passe à la basse pendant qu'une longue phrase chante au-dessus.
+
+
+> **v2 (2026-11-14)** : à l'écoute, Dissolution et Reprise sonnaient trop vides. La basse tient maintenant jusqu'à la mesure 37 (au lieu de 35), la pédale de Ré entre dès 45 (au lieu de 53) et la nappe reprend à −18 dB (au lieu de −24).
 
 ## Brief et contraintes
 
@@ -25,7 +28,7 @@ Profil : drifting-cycles
   - master : Compressor léger, Ceiling.
 - **Longueur cible** : 88 mesures.
 - **Contraintes** (trois, dont deux gestes du profil) :
-  1. *(profil, geste 3)* **une pédale sous des accords qui bougent** : la basse tient Ré de 53 à 60 et ne bouge que sur le premier temps du sommet (61.1, Mi) ;
+  1. *(profil, geste 3)* **une pédale sous des accords qui bougent** : la basse tient Ré de 45 à 60 et ne bouge que sur le premier temps du sommet (61.1, Mi) ;
   2. *(profil, geste 2)* **une montée tardive d'un ton** à 69 %, avec une mesure amincie avant (60 : batterie muette) et une note qui traverse la coupure (Mi) ;
   3. *(la mienne)* **le thème n'a que cinq notes** (La Ré Mi Fa Do, puis Si Mi Fa# Sol Ré) et n'est jamais récrit : il est réharmonisé (cycle 1, cycle 2, cycle 3) puis transposé et donné à la basse.
 - **Hypothèses** : pas de voix, aucun fichier audio ; tout vient des instruments et des effets de Faulk.
@@ -218,16 +221,16 @@ Form: F9 Fausse fin, puis une seconde vie
 section Intro        1-8   : Arp intro, Basse intro, Beat charley [from=5]
 section A            9-24  : Beat A [mute=24], Beat roulement [from=24], Arp cycle 1, Basse cycle 1, Thème, Nappe cycle 1 [from=17]
 section Sommet 1    25-32  : Beat pic, Arp cycle 2, Basse cycle 2, Nappe cycle 2, Thème
-section Dissolution 33-40  : Beat charley [to=35], Basse cycle 2 [to=35], Arp cycle 2 [to=37], Nappe cycle 2 [to=37], Thème [to=37], Note tenue [from=37]
+section Dissolution 33-40  : Beat charley [to=35], Basse cycle 2 [to=37], Arp cycle 2 [to=37], Nappe cycle 2 [to=37], Thème [to=37], Note tenue [from=37]
 section Queue       41-44  :
-section Reprise     45-60  : Beat demi [to=60], Nappe pédale [to=57], Nappe sus [from=57], Thème [from=49 to=57], Basse pédale [from=53], Mi tenu [from=59]
+section Reprise     45-60  : Beat demi [to=60], Nappe pédale [to=57], Nappe sus [from=57], Thème [from=49 to=57], Basse pédale, Mi tenu [from=59]
 section Sommet 2    61-84  : Beat pic [mute=84.4], Arp sommet, Nappe sommet, Basse sommet [mute=69-76], Basse thème [from=69 to=77], Thème mi [mute=69-76], Chant long [from=69 to=77]
 section Fin         85-88  : Nappe fin
 ```
 
 Cycles : intro sans accords ; A cycle 1 ; Sommet 1 et Dissolution cycle 2 ; Reprise cycle 3 (pédale de Ré, puis Esus4) ; Sommet 2 cycle 4 en Mi mineur ; Fin Cmaj7.
 
-Coutures : 24 → 25 roulement de clap ; 32 → 33 la batterie tombe au charley seul, puis basse (35), arpège, nappe et thème (37) s'en vont ; 40 → 41 il ne reste que la queue de l'écho ; 44 → 45 la batterie repart seule avec la nappe ; 60 → 61 mesure amincie (batterie muette), Mi5 tenu, la basse passe de Ré à Mi sur 61.1 ; 84 → 85 le kick manque sur 84.4, puis un seul accord.
+Coutures : 24 → 25 roulement de clap ; 32 → 33 la batterie tombe au charley seul, puis basse, arpège, nappe et thème (37) s'en vont ; 40 → 41 il ne reste que la queue de l'écho ; 44 → 45 la batterie repart avec la nappe et le Ré tenu de la basse ; 60 → 61 mesure amincie (batterie muette), Mi5 tenu, la basse passe de Ré à Mi sur 61.1 ; 84 → 85 le kick manque sur 84.4, puis un seul accord.
 
 Événements uniques :
 
@@ -261,10 +264,10 @@ Au sommet 1 elle est ouverte ; à la dissolution elle tombe vite puis se pose.
 Au vrai sommet l'arpège revient ouvert d'un coup (dans Faulk : le point de 36.4 est en palier jusqu'à 61.1).
 
 ```automation "Nappe gonfle" part="Nappe pédale" param=volume curve=smooth
-45.1 50, 56.4 100
+45.1 65, 56.4 100
 ```
 
-Le volume de la nappe monte en S pendant la pédale (dans Faulk : −13 dB tenu en palier depuis la mesure 1, −24 dB à 45.1, courbe en S jusqu'à −13 dB à 56.4).
+Le volume de la nappe monte en S pendant la pédale (dans Faulk : −13 dB tenu en palier depuis la mesure 1, −18 dB à 45.1, courbe en S jusqu'à −13 dB à 56.4).
 
 ```automation "Thème écho" part="Note tenue" param=delay
 33.1 30 step, 37.1 100 step, 45.1 30
@@ -392,10 +395,10 @@ Sortie de `sheet_tool.py check` (mot pour mot) :
                  edits: Beat A [mute=24]; Beat roulement [from=24]; Nappe cycle 1 [from=17]
   Sommet 1       bars  25-32  ( 8) 5 parts
   Dissolution    bars  33-40  ( 8) 6 parts
-                 edits: Beat charley [to=35]; Basse cycle 2 [to=35]; Arp cycle 2 [to=37]; Nappe cycle 2 [to=37]; Thème [to=37]; Note tenue [from=37]
+                 edits: Beat charley [to=35]; Basse cycle 2 [to=37]; Arp cycle 2 [to=37]; Nappe cycle 2 [to=37]; Thème [to=37]; Note tenue [from=37]
   Queue          bars  41-44  ( 4) 0 parts
   Reprise        bars  45-60  (16) 6 parts
-                 edits: Beat demi [to=60]; Nappe pédale [to=57]; Nappe sus [from=57]; Thème [from=49 to=57]; Basse pédale [from=53]; Mi tenu [from=59]
+                 edits: Beat demi [to=60]; Nappe pédale [to=57]; Nappe sus [from=57]; Thème [from=49 to=57]; Mi tenu [from=59]
   Sommet 2       bars  61-84  (24) 7 parts
                  edits: Beat pic [mute=84.4]; Basse sommet [mute=69-76]; Basse thème [from=69 to=77]; Thème mi [mute=69-76]; Chant long [from=69 to=77]
   Fin            bars  85-88  ( 4) 1 parts
